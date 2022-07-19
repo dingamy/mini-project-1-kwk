@@ -20,7 +20,7 @@ class ViewController: UIViewController {
 
     @IBAction func pressMe(_ sender: UIButton) {
         pressText.text = "I'm from Winnipeg, Canada"
-        smileText.text = "I enjoy going on runs, playing piano, and card games!"
+        smileText.text = "I enjoy going on runs, playing piano, and card games! and also hiking"
 //
         
     }
