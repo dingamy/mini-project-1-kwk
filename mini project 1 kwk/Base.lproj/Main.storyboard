@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,81 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mini_project_1_kwk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, I'm Amy!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLP-Yx-lG3">
+                                <rect key="frame" x="81" y="75" width="252" height="61"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snooze-wallpaper-2-pc" translatesAutoresizingMaskIntoConstraints="NO" id="ajT-ZC-q2y">
+                                <rect key="frame" x="37" y="158" width="341" height="196"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="196" id="N7G-RD-AA3"/>
+                                    <constraint firstAttribute="width" constant="341" id="jF1-c1-HN0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press below to learn more!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dk-uc-qoJ">
+                                <rect key="frame" x="37" y="433" width="340" height="36.5"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJP-7Q-puf">
+                                <rect key="frame" x="163" y="714" width="88" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Press me!"/>
+                                <connections>
+                                    <action selector="pressMe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W0L-i7-q33"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edJ-N6-cq9">
+                                <rect key="frame" x="86" y="488" width="242" height="154"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.86078917980194092" green="0.69979159859489981" blue="0.76682575263056441" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ajT-ZC-q2y" firstAttribute="top" secondItem="qLP-Yx-lG3" secondAttribute="bottom" constant="22" id="2B9-b3-l8f"/>
+                            <constraint firstItem="qLP-Yx-lG3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="81" id="6uP-oP-Ler"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ajT-ZC-q2y" secondAttribute="trailing" constant="36" id="7ag-hV-To6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ajT-ZC-q2y" secondAttribute="trailing" constant="36" id="BOf-AO-N9W"/>
+                            <constraint firstItem="qLP-Yx-lG3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="31" id="Bqp-nV-hou"/>
+                            <constraint firstItem="ajT-ZC-q2y" firstAttribute="top" secondItem="qLP-Yx-lG3" secondAttribute="bottom" constant="22" id="By2-vW-5D2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ajT-ZC-q2y" secondAttribute="trailing" constant="36" id="FVD-7B-qAa"/>
+                            <constraint firstItem="ajT-ZC-q2y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="FZK-gy-m8U"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JJP-7Q-puf" secondAttribute="trailing" constant="163" id="LL3-dn-ZSh"/>
+                            <constraint firstItem="5dk-uc-qoJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="P2N-9I-BYZ"/>
+                            <constraint firstItem="ajT-ZC-q2y" firstAttribute="top" secondItem="qLP-Yx-lG3" secondAttribute="bottom" constant="22" id="Rs6-0G-Yfo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5dk-uc-qoJ" secondAttribute="trailing" constant="37" id="Vki-vK-eeY"/>
+                            <constraint firstItem="JJP-7Q-puf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="163" id="eVC-Ek-A8B"/>
+                            <constraint firstItem="ajT-ZC-q2y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="gfl-uL-4tL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qLP-Yx-lG3" secondAttribute="trailing" constant="81" id="lnJ-4J-YCd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JJP-7Q-puf" secondAttribute="bottom" constant="117" id="puL-dq-PbL"/>
+                            <constraint firstItem="ajT-ZC-q2y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="37" id="rom-uR-zyO"/>
+                            <constraint firstItem="5dk-uc-qoJ" firstAttribute="top" secondItem="ajT-ZC-q2y" secondAttribute="bottom" constant="79" id="ucX-RS-rmq"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hiAmy" destination="qLP-Yx-lG3" id="rHO-lz-Tus"/>
+                        <outlet property="pressText" destination="5dk-uc-qoJ" id="Vb3-Sj-YC1"/>
+                        <outlet property="smileText" destination="edJ-N6-cq9" id="xy8-pP-Ale"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="snooze-wallpaper-2-pc" width="4070" height="2304"/>
+    </resources>
 </document>
